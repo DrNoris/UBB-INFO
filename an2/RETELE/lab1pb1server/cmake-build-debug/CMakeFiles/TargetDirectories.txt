@@ -1,0 +1,3 @@
+/Users/noris/CLionProjects/RETELE/lab1pb1server/cmake-build-debug/CMakeFiles/lab1pb1server.dir
+/Users/noris/CLionProjects/RETELE/lab1pb1server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/noris/CLionProjects/RETELE/lab1pb1server/cmake-build-debug/CMakeFiles/rebuild_cache.dir

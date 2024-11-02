@@ -1,0 +1,11 @@
+# ninja log v6
+1	170	1730384559480830647	CMakeFiles/lab1pb1client_c.dir/main.c.o	a7ef4ec0d8aafa9c
+171	208	1730384559650959643	lab1pb1client_c	6915bb44ecf49622
+2	55	1730384677011232729	CMakeFiles/lab1pb1client_c.dir/main.c.o	a7ef4ec0d8aafa9c
+55	92	1730384677064111837	lab1pb1client_c	6915bb44ecf49622
+2	56	1730385368227770236	CMakeFiles/lab1pb1client_c.dir/main.c.o	a7ef4ec0d8aafa9c
+56	93	1730385368281899072	lab1pb1client_c	6915bb44ecf49622
+1	264	1730385493649136971	CMakeFiles/lab1pb1client_c.dir/main.c.o	a7ef4ec0d8aafa9c
+264	408	1730385493911816868	lab1pb1client_c	6915bb44ecf49622
+2	56	1730385716362533508	CMakeFiles/lab1pb1client_c.dir/main.c.o	a7ef4ec0d8aafa9c
+56	93	1730385716416772219	lab1pb1client_c	6915bb44ecf49622
