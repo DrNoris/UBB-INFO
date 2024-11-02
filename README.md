@@ -4,9 +4,7 @@ Acest repository conține materialele pentru laboratoarele și seminariile din c
 
 ## Structura Proiectului
 
-Fiecare laborator și seminar este organizat în foldere separate pentru a facilita navigarea și accesul rapid la fișierele corespunzătoare. Structura generală a repository-ului este următoarea:
-
-UBB-INFO/ ├── Anul_1/ │ ├── Semestrul_1/ │ │ ├── Laboratoare/ │ │ │ ├── Lab1/ │ │ │ ├── Lab2/ │ │ │ └── ... │ │ └── Seminarii/ │ └── Semestrul_2/ ├── Anul_2/ └── Anul_3/
+Fiecare laborator și seminar este organizat în foldere separate pentru a facilita navigarea și accesul rapid la fișierele corespunzătoare. Structura generală a repository-ului este, An - Semestru - Materie.
 
 
 ## Conținut
@@ -16,7 +14,6 @@ Acest repository include codul, exercițiile și proiectele lucrate la laboratoa
 - Fișiere de proiect și exerciții.
 - Materiale suplimentare (notițe, resurse, etc.), acolo unde este cazul.
 
-> **Notă:** Acest repository este destinat exclusiv utilizării în scopuri educaționale și pentru studiu individual.
 
 ## Instrucțiuni de Utilizare
 
