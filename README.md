@@ -12,7 +12,6 @@ Fiecare laborator și seminar este organizat în foldere separate pentru a facil
 Acest repository include codul, exercițiile și proiectele lucrate la laboratoare și seminarii, structurate după ani și semestre. Fiecare folder de laborator și seminar conține:
 - Exemple de cod și soluții la problemele discutate.
 - Fișiere de proiect și exerciții.
-- Materiale suplimentare (notițe, resurse, etc.), acolo unde este cazul.
 
 
 ## Instrucțiuni de Utilizare
