@@ -6,6 +6,7 @@ import ubb.scs.map.domain.Utilizator;
 import ubb.scs.map.repository.Repository;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -13,6 +14,7 @@ import java.util.Optional;
 public class Service {
     private final Repository<Tuple<Long, Long>, Prietenie> prieteniRepo;
     private final Repository<Long, Utilizator> utilizatoriRepo;
+
     private void loadFriendships() {
         prieteniRepo.findAll().forEach(prietenie -> {
             Utilizator u1 = utilizatoriRepo.findOne(prietenie.getId().getLeft()).orElse(null);
@@ -30,12 +32,11 @@ public class Service {
         this.prieteniRepo = prieteniRepo;
         this.utilizatoriRepo = utilizatoriRepo;
 
-        loadFriendships();
+        //loadFriendships();
     }
 
-    public Optional<Utilizator> addUtilizator(Long id, String firstName, String lastName){
+    public Optional<Utilizator> addUtilizator(String firstName, String lastName){
         Utilizator u = new Utilizator(firstName, lastName);
-        u.setId(id);
         return utilizatoriRepo.save(u);
     }
 
@@ -46,12 +47,12 @@ public class Service {
             return Optional.empty();
         }
 
-        List<Utilizator> prieteni = u.getFrinds();
-        prieteni.forEach(prieten -> {
-            prieten.deleteFriend(u);
-            prieteniRepo.delete(new Tuple<>(prieten.getId(), u.getId()));
-            prieteniRepo.delete(new Tuple<>(u.getId(), prieten.getId()));
-        });
+//        List<Utilizator> prieteni = u.getFrinds();
+//        prieteni.forEach(prieten -> {
+//            prieten.deleteFriend(u);
+//            prieteniRepo.delete(new Tuple<>(prieten.getId(), u.getId()));
+//            prieteniRepo.delete(new Tuple<>(u.getId(), prieten.getId()));
+//        });
 
         return utilizatoriRepo.delete(id);
     }
@@ -114,9 +115,21 @@ public class Service {
         return graph.countConnectedComponents(prieteniRepo.findAll());
     }
 
+    public List<Utilizator> getAllUsers() {
+        List<Utilizator> users = new ArrayList<>();
+        utilizatoriRepo.findAll().forEach(users::add);
+        return users;
+    }
+
     public Map.Entry<List<Long>, Integer> longestNetwork() {
         Iterable<Prietenie> edges = prieteniRepo.findAll();
         Graph graph = new Graph();
         return graph.longestPathInNetwork(edges);
+    }
+
+    public List<Prietenie> getAllFriendships() {
+        List<Prietenie> friendships = new ArrayList<>();
+        prieteniRepo.findAll().forEach(friendships::add);
+        return friendships;
     }
 }

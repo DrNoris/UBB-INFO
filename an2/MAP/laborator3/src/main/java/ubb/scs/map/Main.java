@@ -1,17 +1,21 @@
 package ubb.scs.map;
 
-import ubb.scs.map.domain.validators.PrieteniValidator;
+import ubb.scs.map.domain.Prietenie;
+import ubb.scs.map.domain.Tuple;
+import ubb.scs.map.domain.Utilizator;
 import ubb.scs.map.domain.validators.UtilizatorValidator;
-import ubb.scs.map.repository.file.PritenieRepository;
-import ubb.scs.map.repository.file.UtilizatorRepository;
+import ubb.scs.map.repository.Repository;
+import ubb.scs.map.repository.database.UtilizatorDatabaseRepository;
+import ubb.scs.map.repository.database.PrietenieDatabaseRepository;
 import ubb.scs.map.service.Service;
 import ubb.scs.map.ui.ui;
 
 public class Main {
     public static void main(String[] args) {
-        UtilizatorRepository uRepo = new UtilizatorRepository(new UtilizatorValidator(), "data/utilizatori.txt");
-        PritenieRepository pRepo = new PritenieRepository(new PrieteniValidator(), "data/prietenii.txt");
-
+        Repository<Long, Utilizator> uRepo = new UtilizatorDatabaseRepository("postgres", "noris2580",
+                "jdbc:postgresql://localhost:5432/postgres", new UtilizatorValidator());
+        Repository<Tuple<Long, Long>, Prietenie> pRepo = new PrietenieDatabaseRepository("postgres", "noris2580",
+                "jdbc:postgresql://localhost:5432/postgres");
         Service service = new Service(pRepo, uRepo);
 
         ui ui = new ui(service);

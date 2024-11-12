@@ -24,6 +24,8 @@ public class ui {
             System.out.println("4. Delete Friendship");
             System.out.println("5. Number of networks");
             System.out.println("6. Largest network");
+            System.out.println("7. View all users");
+            System.out.println("8. View all friendships");
             System.out.println("0. Exit");
             System.out.print("Choose an option: ");
 
@@ -48,6 +50,12 @@ public class ui {
                 case 6:
                     longestRoad();
                     break;
+                case 7:
+                    viewAllUsers();  // New case for viewing all users
+                    break;
+                case 8:
+                    viewAllFriendships();  // New case for viewing all users
+                    break;
                 case 0:
                     System.out.println("Exiting...");
                     return; // Exit the loop and end the program
@@ -55,6 +63,30 @@ public class ui {
                     System.out.println("Invalid option. Please try again.");
             }
         }
+    }
+    private void viewAllUsers() {
+        List<Utilizator> users = service.getAllUsers();
+        if (users.isEmpty()) {
+            System.out.println("No users found.");
+        } else {
+            System.out.println("List of all users:");
+            for (Utilizator user : users) {
+                System.out.println("ID: " + user.getId() + ", First Name: " + user.getFirstName() + ", Last Name: " + user.getLastName());
+            }
+        }
+    }
+
+    private void viewAllFriendships(){
+        List<Prietenie> friendships = service.getAllFriendships();
+        if (friendships.isEmpty()) {
+            System.out.println("No friendships found.");
+        } else {
+            System.out.println("List of all users:");
+            for (Prietenie friendship : friendships) {
+                System.out.println(friendship.getId().getLeft() + " -> " + friendship.getId().getRight() + " " + friendship.getDate().toString());
+            }
+        }
+
     }
 
     private void longestRoad() {
@@ -98,8 +130,8 @@ public class ui {
     }
 
     private void addUser() {
-        System.out.print("Enter User ID: ");
-        Long id = scanner.nextLong();
+//        System.out.print("Enter User ID: ");
+//        Long id = scanner.nextLong();
         scanner.nextLine();  // Consume the newline
         System.out.print("Enter First Name: ");
         String firstName = scanner.nextLine();
@@ -107,7 +139,7 @@ public class ui {
         String lastName = scanner.nextLine();
 
         try {
-            Optional<Utilizator> optionalUser = service.addUtilizator(id, firstName, lastName);
+            Optional<Utilizator> optionalUser = service.addUtilizator(firstName, lastName);
             if (optionalUser.isEmpty()) {
                 System.out.println("User added.");
             } else {
