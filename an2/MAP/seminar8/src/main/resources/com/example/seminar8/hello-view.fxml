@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Text?>
+<HBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.seminar8.Controller.NotaController"
+      prefWidth="500" prefHeight="800">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- TableView to display Student, Tema, Nota -->
+    <TableView fx:id="tableView">
+        <columns>
+            <!-- Student Column -->
+            <TableColumn text="Student" fx:id="studentColumn" prefWidth="150"/>
+            <!-- Tema Column -->
+            <TableColumn text="Tema" fx:id="temaColumn" prefWidth="150"/>
+            <!-- Nota Column -->
+            <TableColumn text="Nota" fx:id="notaColumn" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <!-- HBox containing TextFields -->
+    <VBox alignment="CENTER" spacing="10.0">
+          <HBox>
+              <Text text="Nume student"/>
+              <TextField fx:id="studentField"/>
+          </HBox>
+        <HBox>
+            <Text text="Nota mai mare decat"/>
+            <TextField fx:id="temaField"/>
+        </HBox>
+        <HBox>
+            <Text text="Tema"/>
+            <TextField fx:id="notaField"/>
+        </HBox>
+    </VBox>
+</HBox>
