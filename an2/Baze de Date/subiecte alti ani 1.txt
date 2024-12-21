@@ -1,0 +1,68 @@
+Campionat de Table
+
+La firma Cloudflight, pentru a mentine oamenii fericiti fara a mari salariile, se organizeaza un campionat de table.
+Angajatii (nume, nr_contract) joaca meciuri cu alti angajati. Un meci se joaca intr-o data, pe o anume masa (numar, culoare) si trebuie sa fie disputat de 2 participanti. Castigatorul meciului va trece mai departe in camptionat. Pentru fiecare meci se vor salva mutarile participantilor. O mutare are valoare zaruri (2 zaruri - valoare de la 1 la 6), piesa_mutata_de_la, piesa_mutata_la. Meciurile pot vi vizionate de mai multi spectatori. Specatorii vor fi tot angajati.
+
+
+1. Scrieti un script SQL care creeaza un model relational pentru a reprezenta si stoca datele (4p)
+
+2. Scrieti o procedura stocata care calculeaza premiul unui participant dat ca parametru. 
+Pentru fiecare meci castigat, angajatul va primi 100 de puncte de beneficii. 
+Pentru fiecare spectator la meciurile angajatului, va primi 10 puncte de beneficii.
+Pentru fiecare meci pe care angajatul NU l-a vazut, i se vor scadea 10 puncte de beneficii.
+Premiul nu poate fi mai mic decat 0! (3p)
+  
+3. Scrieti un view care calculeaza cate duble a dat jucatorul cu nr_contract "CLF3215" in tot campionatul. O dubla inseamna ca valoare celor 2 zaruri este egala (e.g. 1-1, 3-3, 5-5 etc.). (2p)
+
+
+
+
+
+
+Restaurant Samsara
+
+Restaurantul Samsara doreste imbunatatirea aplicatie pentru comenzi. O comanda (adresa de livrare, data) este plasat de un client (nume, nr_telefon) si contine mai multe preparate. Un preparat poate face parte din mai multe comenzi. Un preparat (denumire, cantitate, pret) are mai multe ingrediente. Un ingredient (denumire, calorii) poate fi folosit in mai multe preparate.
+
+1. Scrieti un script SQL care creeaza un model relational pentru a reprezenta si stoca datele (4p)
+
+2. Un ingredient devine interzis in toata lumea. Samsara doreste sa para ca nu l-a folosit niciodata. Creati o procedura stocata care sterge toate comenzile care contin un ingredient dat ca parametru prin nume. Procedura va returna numarul de comenzi sterse. (3p)
+
+3. Scrieti un view care afiseaza toate comenzile pentru clientul cu numele "Bogdan Ioan" prin data comenzii si suma pe care a achitat-o clientul pentru acea comanda. (2p)
+
+Caleidoscop
+
+Caleidoscop este un serial Netflix. Are 9 episoade. Fiecare episod are durata,
+nume si ordine cronologica. Fiecare utilizator (nume, email) vizioneaza epsisoadele
+intr-o ordine aleatorie, mai putin episdolu 9 care va fi vizionat ultimul.
+Intr-un episod joaca mai multi actori. Fiecare actor are un nume si mai multe replici
+intr-un episod. O replica contine un text si e spus la un moment dat in episod.
+Un actor poate sa apara in mai multe episoade.
+
+1. Scrieti un script SQL care creeaza un model relational pentru a reprezenta si stoca datele specifice
+serialului Caleidoscop (4p)
+
+2. Creati o procedura care "da play" la urmatorul episod pentru un utilizator dat. (3p)
+Puteti folosii functiile RAND() (intoarce un nr in (0,1)) si FLOOR(x) (intoarce cel mai mic intreg fata de x)
+
+3. Creati un view care genereaza scriptul serialului (toate replicile) in format "NUME_ACTOR: TEXT_REPLICA" (2p)
+
+
+
+
+Oser
+
+Organizatorii Oser doresc sa construiasca un catalog online pentru a le fi mai usor 
+clientilor sa gaseasca obiectele de care au nevoie. Fiecare hala (litera, suprafata) are mai multe tarabe 
+(suprafata, numar). Pe fiecare taraba se pot gasi mai multe categorii de produse. Fiecare categorie de produs
+are un nume si poate fi gasita pe mai multe tarabe. Fiecare categorie de produse are mai multe produse.
+Un produs are denumire, pret si poate aparatine unei singure categorii de produse.
+
+1. Scrieti un script SQL care creeaza un model relational pentru a reprezenta si stoca datele (4p)
+
+2. Un vanzator vrea sa faca bani. Creati o procedura stocata care actualizeaza pretul produselor de pe o taraba data:
+Daca pretul e < 100, va creste cu 10 lei.
+Daca pretul e > 200, va creste 50 lei.
+Daca pretul e intre 100 si 200, va creste 10%. (3p) 
+
+3. Spre finalul programalui, vanzatorii reduc din pret, dar nu toti. Creati un view care afiseaza toate produsele (denumire si pret) avand
+pretul redus cu 60% din categoriile haine si vesela din halele "A", "F" si "X" (2p)
