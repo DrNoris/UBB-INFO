@@ -19,7 +19,7 @@ Premiul nu poate fi mai mic decat 0! (3p)
 
 
 
-Restaurant Samsara
+
 
 Restaurantul Samsara doreste imbunatatirea aplicatie pentru comenzi. O comanda (adresa de livrare, data) este plasat de un client (nume, nr_telefon) si contine mai multe preparate. Un preparat poate face parte din mai multe comenzi. Un preparat (denumire, cantitate, pret) are mai multe ingrediente. Un ingredient (denumire, calorii) poate fi folosit in mai multe preparate.
 
@@ -28,6 +28,14 @@ Restaurantul Samsara doreste imbunatatirea aplicatie pentru comenzi. O comanda (
 2. Un ingredient devine interzis in toata lumea. Samsara doreste sa para ca nu l-a folosit niciodata. Creati o procedura stocata care sterge toate comenzile care contin un ingredient dat ca parametru prin nume. Procedura va returna numarul de comenzi sterse. (3p)
 
 3. Scrieti un view care afiseaza toate comenzile pentru clientul cu numele "Bogdan Ioan" prin data comenzii si suma pe care a achitat-o clientul pentru acea comanda. (2p)
+
+
+
+
+
+
+
+
 
 Caleidoscop
 
@@ -49,6 +57,11 @@ Puteti folosii functiile RAND() (intoarce un nr in (0,1)) si FLOOR(x) (intoarce 
 
 
 
+
+
+
+
+
 Oser
 
 Organizatorii Oser doresc sa construiasca un catalog online pentru a le fi mai usor 
@@ -66,3 +79,7 @@ Daca pretul e intre 100 si 200, va creste 10%. (3p)
 
 3. Spre finalul programalui, vanzatorii reduc din pret, dar nu toti. Creati un view care afiseaza toate produsele (denumire si pret) avand
 pretul redus cu 60% din categoriile haine si vesela din halele "A", "F" si "X" (2p)
+
+
+
+

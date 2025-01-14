@@ -1,22 +1,26 @@
 --Tabel Ingrediente
-CREATE or ALTER PROCEDURE ValidateIngredientData
+CREATE OR ALTER FUNCTION ValidateIngredientData (
     @p_nume_ingredient NVARCHAR(255),
     @p_cantitate_ingredient DECIMAL(10,2)
+)
+RETURNS NVARCHAR(100)
 AS
 BEGIN
+    DECLARE @result NVARCHAR(100);
+
     IF @p_nume_ingredient IS NULL OR LTRIM(RTRIM(@p_nume_ingredient)) = ''
     BEGIN
-        RAISERROR ('Eroare: Numele ingredientului nu poate fi gol!', 16, 1);
-        RETURN;
+        SET @result = 'Eroare: Numele ingredientului nu poate fi gol!';
+        RETURN @result;
     END;
 
     IF @p_cantitate_ingredient <= 0
     BEGIN
-        RAISERROR ('Eroare: Cantitatea ingredientului trebuie sa fie mai mare decat zero!', 16, 1);
-        RETURN;
+        SET @result = 'Eroare: Cantitatea ingredientului trebuie sa fie mai mare decat zero!';
+        RETURN @result;
     END;
 
-    PRINT 'Datele sunt valide.';
+    RETURN 'Valid';
 END;
 
 GO
@@ -26,19 +30,22 @@ CREATE OR ALTER PROCEDURE AddIngredient (
 )
 AS
 BEGIN
-    BEGIN TRY
-        EXEC ValidateIngredientData @nume_ingredient, @cantitate_ingredient;
+    DECLARE @validator NVARCHAR(100);
 
-        INSERT INTO Ingrediente (nume_ingredient, cantitate_ingredient)
-        VALUES (@nume_ingredient, @cantitate_ingredient);
+    SET @validator = dbo.ValidateIngredientData(@nume_ingredient, @cantitate_ingredient);
 
-        PRINT 'Ingredientul a fost adaugat cu succes.';
-    END TRY
-    BEGIN CATCH
-        PRINT 'Eroare la adaugarea ingredientului:';
-        PRINT ERROR_MESSAGE();
-    END CATCH;
+    IF @validator <> 'Valid'
+    BEGIN
+        PRINT @validator;
+        RETURN;
+    END;
+
+    INSERT INTO Ingrediente (nume_ingredient, cantitate_ingredient)
+    VALUES (@nume_ingredient, @cantitate_ingredient);
+
+    PRINT 'Ingredientul a fost adăugat cu succes.';
 END;
+
 
 GO
 CREATE OR ALTER PROCEDURE GetAllIngrediente
