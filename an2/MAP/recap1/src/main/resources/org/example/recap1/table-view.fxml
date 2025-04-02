@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.recap1.Controllers.TableView"
+            prefHeight="300.0" prefWidth="400.0">
+
+    <ScrollPane fx:id="scrollPane" layoutX="10.0" layoutY="80.0" prefWidth="400.0" prefHeight="275.0">
+        <VBox fx:id="tablesContainer" spacing="10.0" alignment="TOP_CENTER">
+            <!-- Dynamic menu items will be added here -->
+        </VBox>
+    </ScrollPane>
+
+    <!-- Scrollable order list container on the right -->
+    <ScrollPane fx:id="orderScrollPane" layoutX="420.0" layoutY="80.0" prefWidth="170.0" prefHeight="275.0">
+        <VBox fx:id="orderContainer" spacing="10.0" alignment="TOP_LEFT">
+            <!-- Order list will be displayed here -->
+        </VBox>
+    </ScrollPane>
+
+    <Button fx:id="orderButton" text="Place Order" layoutX="420.0" layoutY="360.0"
+            prefWidth="170.0" onAction="#placeOrder" disable="true"/>
+</AnchorPane>
