@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.guiex1.controller.AddUserController"
+      alignment="CENTER" spacing="10">
+
+    <!-- Set padding around the VBox for spacing -->
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- First TextField -->
+    <TextField fx:id="firstNameField" promptText="Enter first name" />
+
+    <!-- Second TextField -->
+    <TextField fx:id="lastNameField" promptText="Enter last name" />
+
+    <Button fx:id="addButton" text="Add" onAction="#handleAddButton" />
+</VBox>
