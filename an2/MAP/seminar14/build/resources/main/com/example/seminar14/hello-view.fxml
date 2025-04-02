@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.seminar14.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+
+    <TableView fx:id="angajatiTable">
+        <columns>
+            <TableColumn text="Nume" fx:id="numeColumn">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nume"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn text="Venit pe ora" fx:id="venitOraColumn">
+                <cellValueFactory>
+                    <PropertyValueFactory property="venitPeOra"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <!-- Senioritate column -->
+            <TableColumn text="Senioritate" fx:id="senioritateColumn">
+                <cellValueFactory>
+                    <PropertyValueFactory property="senioritate"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>
