@@ -1,0 +1,15 @@
+/Users/noris/RiderProjects/seminar10/seminar10/bin/Debug/net9.0/seminar10
+/Users/noris/RiderProjects/seminar10/seminar10/bin/Debug/net9.0/seminar10.deps.json
+/Users/noris/RiderProjects/seminar10/seminar10/bin/Debug/net9.0/seminar10.runtimeconfig.json
+/Users/noris/RiderProjects/seminar10/seminar10/bin/Debug/net9.0/seminar10.dll
+/Users/noris/RiderProjects/seminar10/seminar10/bin/Debug/net9.0/seminar10.pdb
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/seminar10.GeneratedMSBuildEditorConfig.editorconfig
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/seminar10.AssemblyInfoInputs.cache
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/seminar10.AssemblyInfo.cs
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/seminar10.csproj.CoreCompileInputs.cache
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/seminar10.sourcelink.json
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/seminar10.dll
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/refint/seminar10.dll
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/seminar10.pdb
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/seminar10.genruntimeconfig.cache
+/Users/noris/RiderProjects/seminar10/seminar10/obj/Debug/net9.0/ref/seminar10.dll

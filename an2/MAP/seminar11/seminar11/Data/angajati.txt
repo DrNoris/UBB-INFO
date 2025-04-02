@@ -1,0 +1,11 @@
+1A,Mihai Cirt,50,Junior
+2B,Andrei Popescu,60,Medium
+3C,Ioana Ionescu,55,Junior
+4D,Elena Georgescu,70,Senior
+5E,Alexandru Marinescu,65,Medium
+6F,Laura Dumitrescu,52,Junior
+7G,Cristian Stan,80,Senior
+8H,Monica Florescu,58,Medium
+9I,Radu Vasile,75,Senior
+10J,Anca Tudor,50,Junior
+11K,Vlad Neagu,62,Medium
